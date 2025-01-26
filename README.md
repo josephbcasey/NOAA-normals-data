@@ -1,4 +1,4 @@
-# NOAA-normals-data
+# NOAA normals data
 Temperature and precipitation data from NOAA climate normals 1991-2020 in an SQLite3 database.
 
 The National Centers for Environmental Information (NCEI) and the National Oceanic and Atmospheric Administration (NOAA) publish climate data in various formats. 
@@ -53,3 +53,6 @@ Each station has 365 rows of data in the normals table, differentiated by date. 
 Not every station has data for every variable, but if a variable is present, there are 365 days worth.
 
 Some location names contain obscure abbreviations, so SELECTing by location can be tricky.
+
+## About the 'doc' directory
+This is official NOAA documentation. Much of it does not apply to the filtered results in the SQLite database.
