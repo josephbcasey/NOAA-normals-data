@@ -1,4 +1,4 @@
-# NOAA normals data
+# NOAA 1991-2020 Climate Normals Data
 Temperature and precipitation data from NOAA climate normals 1991-2020 in an SQLite3 database.
 
 The National Centers for Environmental Information (NCEI) and the National Oceanic and Atmospheric Administration (NOAA) publish climate data in various formats. 
@@ -7,7 +7,7 @@ One format is US Climate Normals 1991-2020. That data is available at https://ww
 
 Climate normals are usually based on 30-year averages. 1991-2020 is the most recent available. 
 
-The data is comprehensive, including hundreds of measurements, calculations, and statistical analyses. This repository is for an SQLite3 database containing only temperature and precipitation. In NOAA terminology, these are "dly_tmax_normal", "dly_tmin_normal", and "ytd_prcp_normal".
+The data is comprehensive, including hundreds of measurements, calculations, and statistical analyses. This repository is for an SQLite3 database containing daily temperature and precipitation. In NOAA terminology, these are "dly_tmax_normal", "dly_tmin_normal", and "ytd_prcp_normal". It also includes latitude, longitude, and elevation for each station. 
 
 Not every station has data for every variable. 
 
@@ -48,11 +48,13 @@ USW00093134|34.0511|-118.2353|70.1|LOS ANGELES DWTN USC CAMPUS, CA US
 ```
 
 ## Notes on the database
-Each station has 365 rows of data in the normals table, differentiated by date. The NOAA data includes February 29th, using interpolated data from February 28th and March 1st. This database does **NOT** include February 29th.
+Each station has 365 rows of data in the normals table, keyed by date. The NOAA data includes February 29th, using interpolated data from February 28th and March 1st. This database does **NOT** include February 29th.
 
 Not every station has data for every variable, but if a variable is present, there are 365 days worth.
 
 Some location names contain obscure abbreviations, so SELECTing by location can be tricky.
+
+Temperatures are in Fahrenheit and elevations are in meters. 
 
 ## About the 'doc' directory
 This is official NOAA documentation. Much of it does not apply to the filtered results in the SQLite database.
