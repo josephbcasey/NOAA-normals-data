@@ -56,5 +56,10 @@ Some location names contain obscure abbreviations, so SELECTing by location can 
 
 Temperatures are in Fahrenheit and elevations are in meters. 
 
+Note that precipitation values are 'ytd' - year-to-date. So to get a daily value, subtract one ytd value from the value of the succeeding day.
+
 ## About the 'doc' directory
 This is official NOAA documentation. Much of it does not apply to the filtered results in the SQLite database.
+
+## XML and JSON
+Using SQLiteStudio, free software available at https://sqlitestudio.pl/, you can export the SQL data to XML or JSON. The XML output is 1.54GB. The JSON output is 1.01GB. These may be too big to be useful. They are not included in this repository.
