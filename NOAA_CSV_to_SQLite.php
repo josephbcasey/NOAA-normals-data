@@ -9,11 +9,9 @@
 
 // EDIT THIS - Location of the extracted NOAA CSV files.
 $data_dir = 'Location of the 15,615 NOAA CSV files';
-$data_dir = 'D:/d_climate/new_ai/NOAA_data/1991-2020/normals_daily/';
 
 // EDIT THIS - Name of the SQLite database.
 $database_name = 'your chosen database name';
-$database_name = 'D:\d_climate\new_ai\NOAA_1991_github.db';
 
 
 //Create the SQLite database.
