@@ -5,7 +5,9 @@ The National Centers for Environmental Information (NCEI) and the National Ocean
 
 One format is US Climate Normals 1991-2020. That data is available at https://www.ncei.noaa.gov/data/normals-daily/1991-2020/archive/us-climate-normals_1991-2020_v1.0.1_daily_multivariate_by-station_c20230404.tar.gz. The gz file is 289MB. Uncompressed and extracted, there are 15,615 files totaling 4.67 GB. Each file contains data for one station in CSV format.
 
-Climate normals are usually based on 30-year averages. 1991-2020 is the most recent available. 
+Climate normals are usually based on 30-year averages. 1991-2020 is the most recent available.
+
+This data covers USA states and territories.
 
 The data is comprehensive, including hundreds of measurements, calculations, and statistical analyses. This repository is for an SQLite3 database containing daily temperature and precipitation. In NOAA terminology, these are "dly_tmax_normal", "dly_tmin_normal", and "ytd_prcp_normal". It also includes latitude, longitude, and elevation for each station. 
 
@@ -63,3 +65,10 @@ This is official NOAA documentation. Much of it does not apply to the filtered r
 
 ## XML and JSON
 Using SQLiteStudio, free software available at https://sqlitestudio.pl/, you can export the SQL data to XML or JSON. The XML output is 1.54GB. The JSON output is 1.01GB. These may be too big to be useful. They are not included in this repository.
+
+## Notes on NOAA_CSV_to_SQLite.php
+This PHP script creates a database, then reads the NOAA CSV data and INSERTs it into the database. 
+
+It **MUST BE EDITED** to match your environment. Namely, set variables `$data_dir` and `$database_name`.
+
+It can be modified to select different or additional values. Change the database schema and `$possible_normals_headers`.
