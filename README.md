@@ -9,7 +9,7 @@ Climate normals are usually based on 30-year averages. 1991-2020 is the most rec
 
 This data covers USA states and territories.
 
-The data is comprehensive, including hundreds of measurements, calculations, and statistical analyses. This repository is for an SQLite3 database containing daily temperature and precipitation. In NOAA terminology, these are "dly_tmax_normal", "dly_tmin_normal", and "ytd_prcp_normal". It also includes latitude, longitude, and elevation for each station. 
+The data is comprehensive, including hundreds of measurements, calculations, and statistical analyses. This repository is for an SQLite3 database containing daily temperature and precipitation. In NOAA terminology, these are "dly_tmax_normal", "dly_tmin_normal", and "ytd_prcp_normal". It also includes latitude, longitude, and elevation for each station. See `USW00094728.csv` for an example source CSV file. 
 
 Not every station has data for every variable. 
 
