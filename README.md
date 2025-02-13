@@ -1,5 +1,5 @@
-# NOAA 1991-2020 Climate Normals Data
-Temperature and precipitation data from NOAA climate normals 1991-2020 in an SQLite3 database.
+# NOAA 1991-2020 Daily Climate Normals Data
+Daily temperature and precipitation data from NOAA climate normals 1991-2020 in an SQLite3 database.
 
 The National Centers for Environmental Information (NCEI) and the National Oceanic and Atmospheric Administration (NOAA) publish climate data in various formats. 
 
